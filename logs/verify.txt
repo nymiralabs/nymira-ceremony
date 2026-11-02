@@ -1,0 +1,4 @@
+request_verify_seconds 201
+withdrawal_verify_seconds 174
+request_contribute_seconds 2
+withdrawal_contribute_seconds 3

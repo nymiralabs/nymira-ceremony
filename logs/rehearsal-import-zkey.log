@@ -1,0 +1,6 @@
+powers of tau inputs/powersOfTau28_hez_final_16.ptau: power 16, sha256 1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922, blake2b512 6a6277a2f74e1073601b4f9fed6e1e55226917efb0f0db8a07d98ab01df1ccf43eb0e8c3159432acd4960e2f29fe84a4198501fa54c8dad9e43297453efec125, the public transcript powersOfTau28_hez_final_16.ptau
+imported zkapi-v2-concession-v2 setup rehearsal into rehearsal/setup
+ptau sha256 1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922
+request VK keccak256 0x6d359ba4de593e4ed1c6ee823adf1a2a05efa97cab454c5a1c801497556c1ea7
+withdrawal VK keccak256 0xda1f2c68e4ca28feaeac7f02f12702250ed600a01f90aee06b1a29658f15f7fe
+$B/import_zkey --setup-id rehearsal --ptau  --ptau-sha256  --request-r1cs      36.65s user 2.85s system 184% cpu 21.421 total

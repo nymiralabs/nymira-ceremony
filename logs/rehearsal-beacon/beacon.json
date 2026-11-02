@@ -1,0 +1,14 @@
+{
+  "rule": "first final NEAR mainnet block with header timestamp >= 2026-11-02T12:00:00Z",
+  "height": 222716051,
+  "timestamp_ns": 1793620800541369900,
+  "previous_block_timestamp_ns": 1793620799956605200,
+  "hash_base58": "8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn",
+  "beacon_hex": "6ae23cce517977c28806565035d4c162b9d3ff3feaead9006c52bc342e2a1eaf",
+  "providers": {
+    "https://rpc.mainnet.near.org": "8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn",
+    "https://free.rpc.fastnear.com": "8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn",
+    "https://rpc.shitzuapes.xyz": "8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn",
+    "https://archival-rpc.mainnet.fastnear.com": "8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn"
+  }
+}

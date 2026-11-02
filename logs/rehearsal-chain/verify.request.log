@@ -1,0 +1,43 @@
+[INFO]  snarkJS: Reading r1cs
+[INFO]  snarkJS: Reading tauG1
+[INFO]  snarkJS: Reading tauG2
+[INFO]  snarkJS: Reading alphatauG1
+[INFO]  snarkJS: Reading betatauG1
+[INFO]  snarkJS: Circuit hash: 
+		6191dc41 317f026e 76b244ae 10a46fcd
+		cc171d68 dfacdb1e c4eaacfd 0b48b4a1
+		cb51ff65 c07b367c 2663a936 ac1b9990
+		2de4abb6 33416d40 f20c948a a3889d95
+[INFO]  snarkJS: Circuit Hash: 
+		6191dc41 317f026e 76b244ae 10a46fcd
+		cc171d68 dfacdb1e c4eaacfd 0b48b4a1
+		cb51ff65 c07b367c 2663a936 ac1b9990
+		2de4abb6 33416d40 f20c948a a3889d95
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #4 beacon:
+		ca794df4 d3926bb0 a5208486 6de53ef8
+		196e88a9 e1592159 8815eff9 f3a31fc8
+		5adc2af3 be02ed2b 0b4d2b1b 7bbd7e78
+		c1f0bed8 6fbd2fb9 482b41bf 8a9cfeb9
+[INFO]  snarkJS: Beacon generator: 6ae23cce517977c28806565035d4c162b9d3ff3feaead9006c52bc342e2a1eaf
+[INFO]  snarkJS: Beacon iterations Exp: 28
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #3 rehearsal-3:
+		0f661f79 76d92373 02c4cadf 68564134
+		d50f11e6 4dd1acae 8302d2e3 bc8e60cf
+		f7bce686 8dbb6702 50f090d1 3fa3f44d
+		5a8f79c0 9c8d5b13 3a025b73 834630a1
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #2 rehearsal-2:
+		9248af1d 2c3281a2 b26fb14b 37c0c98e
+		c2127aed c38993fd 8906a51b f4073b86
+		a37c3388 f8dc00ca 6931ed80 5afbc98c
+		ba12c1de 871f7420 9ff16d82 a291dc63
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #1 rehearsal-1:
+		070a880e 5fedeaf9 8b0a0f70 6d30c9f1
+		3809bb0e e696ca2d 65017fc8 89192559
+		4afa7231 5d273f1b 8a273c8c ad0b4400
+		c90f955c 06872a97 9d3647b8 c7ce3e28
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: ZKey Ok!

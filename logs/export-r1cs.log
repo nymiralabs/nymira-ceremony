@@ -1,0 +1,2 @@
+request.r1cs: 23507 constraints, 12 public inputs, 23215 witnesses, domain 2^15, sha256 28067d5f6f8b222a5af37cf53239f04a972f6fc0d0c031ed0ad99bc1d4820cfd
+withdrawal.r1cs: 20545 constraints, 16 public inputs, 20062 witnesses, domain 2^15, sha256 cd332f7b3876a9a7f883bf8d3f7baa8c090ce8a301c7495ee4ccedfc4f485401

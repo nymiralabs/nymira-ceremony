@@ -1,0 +1,5 @@
+tools/node_modules/
+inputs/*.ptau
+chain/
+rehearsal/
+r1cs/*.r1cs

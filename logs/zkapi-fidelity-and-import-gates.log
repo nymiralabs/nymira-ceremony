@@ -1,0 +1,27 @@
+   Compiling zkapi-proof v0.2.0 (/Users/xeloxa/Desktop/Nymira/vendor/zkapi/protocol/rust/crates/zkapi-proof)
+    Finished `release` profile [optimized] target(s) in 3.97s
+     Running tests/r1cs_fidelity.rs (target/release/deps/r1cs_fidelity-82919bc1129b9fcf)
+
+running 3 tests
+test r1cs_export_roundtrip ... ok
+test honest_assignments_satisfy_the_exported_file ... ok
+test r1cs_negative_assignments ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.65s
+
+     Running tests/zkey_import.rs (target/release/deps/zkey_import-5eb72b86b276b615)
+
+running 9 tests
+test ceremony_zkeys_pass_the_import_gates ... ignored, needs ceremony files in ZKAPI_PTAU, ZKAPI_REQUEST_ZKEY and ZKAPI_WITHDRAWAL_ZKEY
+test public_powers_of_tau_passes_the_import_checks ... ignored, needs a public powers of tau in ZKAPI_PTAU
+test malformed_powers_of_tau_are_refused ... ok
+test powers_of_tau_must_be_one_reference_string ... ok
+test binding_gate_checks_every_key_point ... ok
+test foreign_or_recoefficiented_zkeys_are_refused ... ok
+test development_keys_round_trip_through_zkeys ... ok
+test keys_set_up_from_another_c_matrix_are_refused ... ok
+test toy_ceremony_imports_end_to_end has been running for over 60 seconds
+test toy_ceremony_imports_end_to_end ... ok
+
+test result: ok. 7 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 108.01s
+

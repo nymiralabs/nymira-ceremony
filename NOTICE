@@ -1,0 +1,12 @@
+Nymira ceremony
+Copyright (c) Nymira Labs
+
+This repository holds files derived from zkapi (https://github.com/ethereum/zkapi),
+commit 4ac25c811318d96a873b8b232c7be2252e16c0bd: the two R1CS circuit exports, their manifest
+and the key files built from them. zkapi's workspace is licensed MIT OR Apache-2.0. The
+upstream repository root has no license file; a request is open at ethereum/zkapi#28.
+
+The Groth16 and powers-of-tau tooling is snarkjs 0.7.6 (GPL-3.0, https://github.com/iden3/snarkjs).
+It is used as a command-line tool and is not part of this repository.
+
+Phase 1 is the public Hermez powers of tau, powersOfTau28_hez_final_16.ptau.

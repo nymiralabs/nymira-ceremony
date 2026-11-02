@@ -1,0 +1,21 @@
+{
+  "circuit_id": "zkapi-v2-concession-v2",
+  "circuits": {
+    "request": {
+      "constraints": 23507,
+      "domain_size": 32768,
+      "public_inputs": 12,
+      "witness_variables": 23215
+    },
+    "withdrawal": {
+      "constraints": 20545,
+      "domain_size": 32768,
+      "public_inputs": 16,
+      "witness_variables": 20062
+    }
+  },
+  "files": {
+    "request.r1cs": "28067d5f6f8b222a5af37cf53239f04a972f6fc0d0c031ed0ad99bc1d4820cfd",
+    "withdrawal.r1cs": "cd332f7b3876a9a7f883bf8d3f7baa8c090ce8a301c7495ee4ccedfc4f485401"
+  }
+}
