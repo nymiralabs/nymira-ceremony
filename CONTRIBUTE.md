@@ -47,7 +47,7 @@ It must print `ZKey Ok!` twice. If it does not, stop and tell the coordinator in
 scripts/contribute.sh PREVIOUS_DIR MY_DIR "your name or key id"
 ```
 
-This adds one contribution to each circuit and writes `statement.txt` with four SHA-256 values: the pair you started from and the pair you produced. To use your own randomness, replace the `entropy=` line in the script with your own value. Do not publish it.
+This adds one contribution to each circuit and writes `statement.txt` with four SHA-256 values: the pair you started from and the pair you produced. The script passes the randomness to snarkjs as a command-line argument, which other users on the same machine can see in the process list for the few seconds it runs. On a shared machine, run `tools/node_modules/.bin/snarkjs zkey contribute PREVIOUS_DIR/request.zkey MY_DIR/request.zkey --name="your name"` yourself (and the same for `withdrawal`); snarkjs then asks you to type random text. To use your own randomness with the script, replace the `entropy=` line. Do not publish it.
 
 ## 5. Publish and attest
 
