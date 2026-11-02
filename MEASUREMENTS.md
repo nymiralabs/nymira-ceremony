@@ -31,7 +31,7 @@ With a 12-hour slot, contributing is quick; the time goes into verifying what yo
 
 The rehearsal beacon rule was the first final NEAR mainnet block at or after 2026-11-02 12:00:00 UTC: height 222,716,051, hash `8CEJVVv1xjHpwZkS7cxFUEHTW8mPHgxbcmyXS9y7s4Gn`, 32 bytes `6ae23cce517977c28806565035d4c162b9d3ff3feaead9006c52bc342e2a1eaf`. Three providers (`rpc.mainnet.near.org`, `free.rpc.fastnear.com`, `rpc.shitzuapes.xyz`) and one archival node (`archival-rpc.mainnet.fastnear.com`) returned the same hash. The search takes about 6 seconds.
 
-The non-archival providers keep only a few days of blocks, so the beacon must be fetched soon after 7 November 00:00 UTC. `archival-rpc.mainnet.near.org` answers 429 "deprecated" on 2 November 2026.
+The non-archival providers keep only a few days of blocks, so the beacon must be fetched soon after 4 November 00:00 UTC. `archival-rpc.mainnet.near.org` answers 429 "deprecated" on 2 November 2026.
 
 ## Not covered by the rehearsal
 

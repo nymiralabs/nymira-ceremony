@@ -1,6 +1,6 @@
 # Contributing
 
-You need a computer with Node 24, about 300 MB of disk and a few minutes of CPU. Your slot is 12 hours; a contribution itself takes seconds, and checking what you receive takes a few minutes per circuit.
+You need a computer with Node 24, about 300 MB of disk and a few minutes of CPU. Your slot is 12 hours (slots 2 and 3 in the queue); a contribution itself takes seconds, and checking what you receive takes a few minutes per circuit.
 
 Nobody asks you for your randomness. Do not send it to anyone, and do not reuse it. The script below draws it from your operating system, uses it once and lets it go. If you prefer, supply your own with `-e` (see step 4).
 
@@ -55,4 +55,4 @@ Publish `request.zkey` and `withdrawal.zkey` from `MY_DIR` somewhere you control
 
 ## 6. After the beacon
 
-When the final zkeys are out, run `scripts/verify-final.sh` on them with your own ptau and R1CS, check that your contribution hash appears in both logs, and post a signed statement that it does. An outside contribution counts toward the 7 November rule only with that post.
+When the final zkeys are out, run `scripts/verify-final.sh` on them with your own ptau and R1CS, check that your contribution hash appears in both logs, and post a signed statement that it does. This post is optional; it confirms your contribution is in the chain the vault uses.

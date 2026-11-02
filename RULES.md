@@ -1,14 +1,16 @@
 # Rules
 
-These rules are fixed before the first outside contribution. A change after that point is announced in the ceremony issue, and anyone who has already contributed may withdraw.
+These rules were last changed on 2 November 2026, before any contribution was published. After the first outside contribution, a change is announced in the ceremony issue, and anyone who has already contributed may withdraw.
 
 ## What is being secured
 
-Two Groth16 circuits of zkapi (`request` and `withdrawal`, [`PINS.md`](PINS.md)) on top of the public Hermez powers of tau. Each contribution covers both circuits. The keys protect against forged proofs: with them the vault accepts only proofs made for its circuits, and no one, including the team, can forge a withdrawal if at least one contributor discarded their randomness.
+Two Groth16 circuits of zkapi (`request` and `withdrawal`, [`PINS.md`](PINS.md)) on top of the public Hermez powers of tau. Each contribution covers both circuits. The keys are for the Nymira vault on NEAR testnet, which holds test USDC only. They are not for mainnet.
 
 ## Soundness
 
-The keys are sound if at least one contributor was honest and destroyed their entropy. Nymira cannot prove from the outside that any contributor was. Anonymous contributors count by the first public key they signed with, so "multi-party" here rests on each contributor's own statement. The circuits have not had an independent review.
+The keys are sound if at least one contributor was honest and destroyed their entropy. Nymira runs this ceremony with its own contributions and does not recruit outside contributors; the team cannot prove from the outside that any contributor was honest. Read the keys as a setup made by the team alone, with a public beacon and a public transcript, until an outside contributor appears. Whoever holds the team's machines could forge proofs against a vault that uses them, so the vault holds test USDC only. The circuits have not had an independent review.
+
+Anyone who wants to contribute may. A volunteer's contribution is accepted and counted, but nothing in the rules waits for one.
 
 ## Chain and files
 
@@ -25,11 +27,10 @@ Every accepted pair's SHA-256 values, the snarkjs `integrity` string and the sna
 
 ## Queue, slots and timeouts
 
-- The window runs from 2 November 2026 00:00 UTC to 6 November 2026 23:59 UTC. [`QUEUE.md`](QUEUE.md) holds ten fixed 12-hour slots; the coordinator takes slot 1.
-- A contributor books a slot by commenting on the queue issue. A booking is for one slot.
-- A slot with no booking is a spare slot. Whoever asks first may take it.
-- If the contributor has not published by the end of their slot, the next booked contributor (or the next spare) goes first, and the late contributor may still contribute afterwards if the head has not moved. A pair built on an old head is rejected as stale and redone from the head.
-- No contribution published at or after 2026-11-07 00:00 UTC counts. "Published" means the time of the issue post that links the files.
+- The window runs from 2 November 2026 12:00 UTC to 3 November 2026 23:59 UTC. [`QUEUE.md`](QUEUE.md) holds three fixed 12-hour slots. The coordinator makes the first contribution and then two more, each with fresh randomness, each in a separate directory under a separate operating-system user.
+- A volunteer books a slot by commenting on the queue issue. Slots 2 and 3 are open; if nobody books one, the window passes with the coordinator's three contributions only.
+- If a booked contributor has not published by the end of their slot, the slot passes. The contributor may still contribute afterwards if the head has not moved. A pair built on an old head is rejected as stale and redone from the head.
+- No contribution published at or after 2026-11-04 00:00 UTC counts. "Published" means the time of the issue post that links the files.
 
 ## Entropy
 
@@ -61,31 +62,24 @@ and signs it with one of:
 
 An anonymous contributor signs with a fresh key. The coordinator records the first public key seen for that contributor in `contributors.md`; the contributor counts under that key.
 
-## People we did not pick
+## Contributors
 
-An outside contributor is someone who answered the public call and has no tie to the team: not a member, relative, employee, contractor or investor of Nymira Labs, and not someone whose key the team generated or holds. An anonymous contributor is counted by the first public key they signed with. An outside contribution counts toward the 7 November rule only after that contributor posts the final-chain statement below; a contributor who never posts it is not counted, however good their contribution was.
+The coordinator's three contributions are team contributions. A volunteer is anyone else. Volunteers are listed by name or by the first public key they signed with. Nobody is required to post a final-chain statement; a volunteer who does is listed as having confirmed.
 
 ## Beacon
 
-The beacon is the hash of the first final NEAR mainnet block whose header timestamp is at or after 2026-11-07 00:00 UTC. It is applied to both circuits after the last accepted contribution, with `numIterationsExp = 28`.
+The beacon is the hash of the first final NEAR mainnet block whose header timestamp is at or after 2026-11-04 00:00 UTC. It is applied to both circuits after the last accepted contribution, with `numIterationsExp = 28`.
 
-After the block is final, `scripts/fetch-beacon.mjs` finds it by height, fetches it from three independent providers and one archival node, compares the hashes and stores the raw JSON and the height. The base58 hash is decoded to 32 bytes and passed to snarkjs as 64 lowercase hex characters. NEAR mainnet is only a public random source here; the vault may run on any network.
+After the block is final, `scripts/fetch-beacon.mjs` finds it by height, fetches it from three independent providers and one archival node, compares the hashes and stores the raw JSON and the height. The base58 hash is decoded to 32 bytes and passed to snarkjs as 64 lowercase hex characters. NEAR mainnet is only a public random source here; the vault runs on testnet.
 
 ## Final-chain statement
 
-After the beacon, each contributor runs `scripts/verify-final.sh` on the final zkeys, with their own ptau download and their own R1CS export, and posts a signed statement that their contribution hash from the attestation appears in the verify log of both circuits.
+After the beacon, each volunteer who contributed may run `scripts/verify-final.sh` on the final zkeys and post a signed statement that their contribution hash appears in the verify log of both circuits.
 
 ## Independent checks
 
-An outside volunteer runs `zkey verify` on both final zkeys with their own ptau and R1CS and publishes the log. A second verifier (neither the first volunteer nor the coordinator) does the same with snarkjs built from the tagged source.
+The coordinator runs `zkey verify` on both final zkeys with a fresh ptau download and a fresh R1CS export in a clean directory, and once with snarkjs built from the tagged source, and publishes the logs. Anyone else can repeat this. An outside verification is welcome and is not waited for.
 
-## Decision rule for 7 November
+## Which keys the vault uses
 
-Ceremony keys are used if all of these hold on 7 November:
-
-1. At least three valid contributions before the beacon, with at least two from people we did not pick, each of those two with a posted final-chain statement.
-2. The beacon is applied to both circuits.
-3. The outside `zkey verify` log is published.
-4. zkapi's `import_zkey` and proving gate pass.
-
-Otherwise the public vault gets fallback keys made by the team alone under the `nymira` setup id. They ship only after an outside `zkey verify` against the Hermez ptau and the R1CS is published. The README then carries a warning at the top: no known privacy loss, funds at risk, because the team could forge proofs and the outside verify checks only that the proving key is well formed. Open user deposits stay capped at 100 USDC either way. zkapi's development keys are never used on mainnet or on the final public vault.
+The testnet vault uses the keys this ceremony produces, imported with zkapi's `import_zkey`. Public text says so, with the warning at the top of the README: test funds only, the team could forge proofs, no known privacy loss. zkapi's development keys are never used on mainnet or on the final public vault. If the ceremony cannot finish, the vault stays on the `rehearsal` keys and says so.

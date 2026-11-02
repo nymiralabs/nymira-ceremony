@@ -14,7 +14,7 @@ Everything a contributor or verifier compares against. These values are fixed fo
 | ptau source | `https://circom.info/powersOfTau28_hez_final_16.ptau`. The original Hermez bucket (`storage.googleapis.com/zkevm/ptau/`) answers 403 on 2 November 2026; the file from circom.info has the same Blake2b-512. |
 | snarkjs | 0.7.6, npm `integrity` `sha512-4uH1xA5JzVU5jaaWS2fXej3+RC6L5Erhr6INTJtUA27du4Elbh4VXCeeRjB4QiwL6N6y7SNKePw5prTxyEf4Zg==` |
 | snarkjs source | tag `v0.7.6` (an annotated tag), commit `9a8f1c0083d18b9b5e18f526cfd729e7259423be`, equal to the package's `gitHead` |
-| Beacon | hash of the first final NEAR mainnet block with a header timestamp at or after `2026-11-07T00:00:00Z`, `numIterationsExp = 28` |
+| Beacon | hash of the first final NEAR mainnet block with a header timestamp at or after `2026-11-04T00:00:00Z`, `numIterationsExp = 28` |
 
 The same SHA-256 values and the snarkjs integrity string and commit are posted on a second channel (see [`RULES.md`](RULES.md)).
 
