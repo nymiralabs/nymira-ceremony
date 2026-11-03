@@ -16,7 +16,7 @@ Everything a contributor or verifier compares against. These values are fixed fo
 | snarkjs source | tag `v0.7.6` (an annotated tag), commit `9a8f1c0083d18b9b5e18f526cfd729e7259423be`, equal to the package's `gitHead` |
 | Beacon | hash of the first final NEAR mainnet block with a header timestamp at or after `2026-11-04T00:00:00Z`, `numIterationsExp = 28` |
 
-The same SHA-256 values and the snarkjs integrity string and commit are posted on a second channel (see [`RULES.md`](RULES.md)).
+These values are published here only; there is no second channel (see [`RULES.md`](RULES.md)). Recompute them rather than trusting this file.
 
 ## Reproducing the inputs
 

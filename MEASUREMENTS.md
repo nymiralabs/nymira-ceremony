@@ -1,6 +1,6 @@
 # Measurements
 
-From the rehearsal on 2 November 2026 with zkapi's `rehearsal` setup id. One machine (Apple M4, 10 cores, 16 GB), snarkjs 0.7.6 from npm, Node v26.12.1. Contributors on slower machines or other operating systems will see other times. Node 24 was not run in the rehearsal.
+From the rehearsal on 2 November 2026 with zkapi's `rehearsal` setup id. One machine (Apple M4, 10 cores, 16 GB), snarkjs 0.7.6 from npm, Node v26.12.1. Other machines or operating systems will see other times. Node 24 was not run in the rehearsal.
 
 ## Sizes
 
@@ -25,7 +25,7 @@ Three contributions and the beacon add 1,651 bytes to each zkey.
 | `import_zkey` with all gates | 21 s | |
 | `proofs` test file on the imported setup | 7.4 s | |
 
-With a 12-hour slot, contributing is quick; the time goes into verifying what you received.
+Contributing is quick; the time goes into verifying the previous pair.
 
 ## Beacon
 
@@ -36,5 +36,5 @@ The non-archival providers keep only a few days of blocks, so the beacon must be
 ## Not covered by the rehearsal
 
 - Three contributions on three different machines: all three ran on this one machine in separate directories.
-- Verification by a second person. A second directory with a fresh ptau download, a fresh R1CS export and a fresh `npm ci` verified the final zkeys, but on the same machine.
+- Verification by a second person (none is planned; the ceremony is team-only). A second directory with a fresh ptau download, a fresh R1CS export and a fresh `npm ci` verified the final zkeys, but on the same machine.
 - Node 24.
