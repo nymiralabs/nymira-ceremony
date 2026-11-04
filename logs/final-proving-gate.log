@@ -1,0 +1,17 @@
+   Compiling zkapi-proof v0.2.0 (<nymira>/vendor/zkapi/protocol/rust/crates/zkapi-proof)
+    Finished `release` profile [optimized] target(s) in 2.16s
+     Running tests/proofs.rs (/tmp/zk-import-target/release/deps/proofs-9828b375cdc60797)
+
+running 9 tests
+test setup_poseidon_runtime_is_the_generator_output ... ok
+test key_kinds_and_setup_ids ... ok
+test provers_refuse_invalid_statements ... ok
+test setup_matches_its_manifest_and_adapter ... ok
+test non_canonical_public_inputs_do_not_verify ... ok
+test development_keys_are_circom_reduction_keys ... ok
+test mutating_any_public_input_fails_verification ... ok
+test end_to_end_chain ... ok
+test positive_proofs_of_every_kind_verify ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.98s
+

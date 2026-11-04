@@ -1,6 +1,6 @@
 # Rules
 
-Last changed on 2 November 2026, before any contribution was published. A later change is recorded in this repository's history.
+Published on 2 November 2026 before the first contribution. Rewritten on 3 November 2026, after the three contributions, to describe the ceremony as it is run (team only, one hash channel, no queue); the chain, the scripts used for the contributions and the pins did not change in that rewrite. Later changes are recorded in this repository's history.
 
 ## What is being secured
 

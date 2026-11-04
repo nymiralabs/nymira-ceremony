@@ -1,4 +1,4 @@
-   Compiling zkapi-proof v0.2.0 (/Users/xeloxa/Desktop/Nymira/vendor/zkapi/protocol/rust/crates/zkapi-proof)
+   Compiling zkapi-proof v0.2.0 (<nymira>/vendor/zkapi/protocol/rust/crates/zkapi-proof)
     Finished `release` profile [optimized] target(s) in 2.63s
      Running tests/proofs.rs (target/release/deps/proofs-9828b375cdc60797)
 

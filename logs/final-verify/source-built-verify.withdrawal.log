@@ -1,0 +1,43 @@
+[INFO]  snarkJS: Reading r1cs
+[INFO]  snarkJS: Reading tauG1
+[INFO]  snarkJS: Reading tauG2
+[INFO]  snarkJS: Reading alphatauG1
+[INFO]  snarkJS: Reading betatauG1
+[INFO]  snarkJS: Circuit hash: 
+		a0976f4b b9107945 d7118e8a b3100663
+		1ca920b7 18f12fdf 42c5a72e 6bbf3775
+		4d9ef209 f7ddd5bb 4c03bed0 0aa98752
+		47c69d5d 9cf61340 96d6868f 4d9b4035
+[INFO]  snarkJS: Circuit Hash: 
+		a0976f4b b9107945 d7118e8a b3100663
+		1ca920b7 18f12fdf 42c5a72e 6bbf3775
+		4d9ef209 f7ddd5bb 4c03bed0 0aa98752
+		47c69d5d 9cf61340 96d6868f 4d9b4035
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #4 beacon:
+		98db78c6 81e9b9ca f7f8f7e5 80957c4a
+		469c344e fda08cff 2695cc8d 73f8e365
+		5b504e82 dcc629ee 8b6794fa 0c8ea393
+		f33b4f24 55ff3db0 34c69207 d9725ef7
+[INFO]  snarkJS: Beacon generator: 4cfbfbfecd8f7b3232abe75895f579e665e382d5f9cf7880e61f11a4385fbfc4
+[INFO]  snarkJS: Beacon iterations Exp: 28
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #3 Nymira Labs coordinator 3:
+		89d56f1b 2093cb6e 32c768c3 759a78ba
+		bf950b0d a9470fe4 5096d412 6b89ab12
+		d42fb5bd deafa9fb 9920e119 8dff56ff
+		1179cf1c f97c9437 f03b14da cb2ab39e
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #2 Nymira Labs coordinator 2:
+		b1811c92 cfcd161e 3a033942 103d042a
+		0b8c8a90 c8e6b9ed a82c7eb3 dc845f3d
+		c2f3c4fd 6132ce80 507b96c9 bd52f55e
+		7a65e2ea b0617b9b 6cf232ca 7d38e7d2
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #1 Nymira Labs coordinator 1:
+		6c917427 1ee476b2 b1f55f35 bf127b88
+		d61ec889 264bc5b2 cecc9caf 725d92da
+		0d69087b 2fe62b59 d184fe6b 88c9865e
+		5731bddc 46d541c8 df998372 41729fbc
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: ZKey Ok!

@@ -3,7 +3,7 @@
 
 running 2 tests
 ptau sha256 1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922, blake2b512 6a6277a2f74e1073601b4f9fed6e1e55226917efb0f0db8a07d98ab01df1ccf43eb0e8c3159432acd4960e2f29fe84a4198501fa54c8dad9e43297453efec125, public transcript Some("powersOfTau28_hez_final_16.ptau")
-/Users/xeloxa/Desktop/nymira-ceremony/inputs/powersOfTau28_hez_final_16.ptau is powersOfTau28_hez_final_16.ptau (sha256 1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922)
+<ceremony>/inputs/powersOfTau28_hez_final_16.ptau is powersOfTau28_hez_final_16.ptau (sha256 1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922)
 request: the domain of 32768 points passes the reference-string checks
 request zkey passes the import gates
 withdrawal: the domain of 32768 points passes the reference-string checks

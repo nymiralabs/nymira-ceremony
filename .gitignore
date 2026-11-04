@@ -3,3 +3,5 @@ inputs/*.ptau
 chain/
 rehearsal/
 r1cs/*.r1cs
+final-setup/
+transcript.sha256sums.bak
