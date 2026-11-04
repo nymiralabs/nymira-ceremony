@@ -16,6 +16,22 @@ Read this first. The team runs this ceremony alone, for the Nymira vault on NEAR
 | `logs/` | zkapi fidelity and import gate logs, rehearsal import and proving gate logs |
 | `r1cs/r1cs-manifest.json` | R1CS export manifest |
 
+## Result (4 November 2026)
+
+The chain has three team contributions and a beacon from NEAR mainnet block 222942364. `import_zkey --setup-id mpc-1` accepted it. [`chain-record/0004/statement.txt`](chain-record/0004/statement.txt) has every hash. In short:
+
+| | |
+|---|---|
+| `request.zkey` SHA-256 | `56b0f2d61ab18d87c4697e4dcb5409ea9b2e34f0e1185de58905fed8ed3b505e` |
+| `withdrawal.zkey` SHA-256 | `92b83710e19adad380e4baba3a4726e94fa96587ca12c3be4f6205eb7da5a16b` |
+| request verifying key, keccak256 | `0xf3092e0d550f696a6507f279862afb43d0c22663de56f1b47160b5db6fc6fa1b` |
+| withdrawal verifying key, keccak256 | `0x3469ebb3245101549343dbe5939427d3dc7706c314f281f9b5935416fc720c8d` |
+| transcript SHA-256 | `e75cae40c203b08f8b9e559a2fa4b18f464e709d68abe01318c2d8a7aa4b7e07` |
+
+The `final` release holds the zkeys and the imported setup directory (`request.pk`, `request.vk`, `withdrawal.pk`, `withdrawal.vk`, `manifest.json`); each earlier pair has its own release (`chain-0000` to `chain-0003`). `chain-record/` has the statements, contribution lists and logs of every step, with local paths replaced by `<home>`, `<ceremony>` and `<nymira>`; `transcript.sha256sums` hashes the original files. The two verification logs (`logs/final-verify/`) come from snarkjs 0.7.6 from npm and built from its tag, each with a fresh ptau and an R1CS exported from a fresh zkapi clone.
+
+The same people ran every contribution, from the project's own machines: the keys are sound if at least one of the three used randomness that was destroyed, and nobody outside can check that. The zkapi development keys, whose secrets are public, are never used on the final vault.
+
 ## Timeline (UTC)
 
 - Contributions: 2 November 2026 12:00 to 3 November 23:59, three contributions by the team.
@@ -23,4 +39,4 @@ Read this first. The team runs this ceremony alone, for the Nymira vault on NEAR
 
 ## Checking the result
 
-Anyone can recompute the beacon from an archival NEAR node (`node scripts/fetch-beacon.mjs 2026-11-04T00:00:00Z OUT`), run `scripts/verify-final.sh` on the final zkeys with their own ptau and R1CS, and compare the verifying-key hashes in the transcript with the vault's `vk_hashes()`.
+Anyone can recompute the beacon from an archival NEAR node (`node scripts/fetch-beacon.mjs 2026-11-04T00:00:00Z OUT`; the three non-archival providers keep about 20 hours, so after 4 November only the archival nodes answer and the raw files in `logs/beacon-final/` are the record), run `scripts/verify-final.sh` on the final zkeys with their own ptau and R1CS, and compare the verifying-key hashes in the transcript with the vault's `vk_hashes()`.

@@ -41,20 +41,23 @@ async function at(url, height) {
   throw new Error(`no block in 50 heights from ${height}`);
 }
 
+// The exact nanosecond timestamp is a string in the block header (`timestamp_nanosec`); the
+// numeric `timestamp` is parsed as a double and loses the last three digits.
+const ts = (h) => BigInt(h.timestamp_nanosec ?? h.timestamp);
 const head = (await block(ARCHIVAL, { finality: 'final' })).block.header;
-if (BigInt(head.timestamp) < target) throw new Error('the target time has not passed on the final head yet');
+if (ts(head) < target) throw new Error('the target time has not passed on the final head yet');
 // NEAR makes at most about 3 blocks a second, so the block cannot lie further back than this.
-const secondsAgo = Number((BigInt(head.timestamp) - target) / 1_000_000_000n);
+const secondsAgo = Number((ts(head) - target) / 1_000_000_000n);
 let lo = Math.max(1, head.height - (secondsAgo + 60) * 3), hi = head.height;
 // invariant: ts(at(hi)) >= target; the first such block is at or after lo
 while (lo < hi) {
   const mid = Math.floor((lo + hi) / 2);
   const b = (await at(ARCHIVAL, mid)).block.header;
-  if (BigInt(b.timestamp) >= target) hi = b.height < hi ? b.height : mid; else lo = b.height + 1;
+  if (ts(b) >= target) hi = b.height < hi ? b.height : mid; else lo = b.height + 1;
 }
 const found = (await at(ARCHIVAL, lo)).block.header;
 const prev = (await block(ARCHIVAL, { block_id: found.prev_hash })).block.header;
-if (!(BigInt(found.timestamp) >= target && BigInt(prev.timestamp) < target)) throw new Error('search ended on a wrong block');
+if (!(ts(found) >= target && ts(prev) < target)) throw new Error('search ended on a wrong block');
 
 mkdirSync(outDir, { recursive: true });
 const hashes = {};
@@ -70,14 +73,17 @@ const hash = [...distinct][0];
 
 const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 let n = 0n;
-for (const c of hash) n = n * 58n + BigInt(ALPHABET.indexOf(c));
+for (const c of hash) {
+  if (ALPHABET.indexOf(c) < 0) throw new Error(`not a base58 character in the block hash: ${c}`);
+  n = n * 58n + BigInt(ALPHABET.indexOf(c));
+}
 const hex = n.toString(16).padStart(64, '0');
 if (hex.length !== 64) throw new Error('hash is not 32 bytes');
 const record = {
   rule: `first final NEAR mainnet block with header timestamp >= ${when}`,
   height: found.height,
-  timestamp_ns: found.timestamp,
-  previous_block_timestamp_ns: prev.timestamp,
+  timestamp_ns: ts(found).toString(),
+  previous_block_timestamp_ns: ts(prev).toString(),
   hash_base58: hash,
   beacon_hex: hex,
   providers: hashes,

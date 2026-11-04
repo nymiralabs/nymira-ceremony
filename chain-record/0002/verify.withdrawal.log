@@ -1,0 +1,29 @@
+[INFO]  snarkJS: Reading r1cs
+[INFO]  snarkJS: Reading tauG1
+[INFO]  snarkJS: Reading tauG2
+[INFO]  snarkJS: Reading alphatauG1
+[INFO]  snarkJS: Reading betatauG1
+[INFO]  snarkJS: Circuit hash: 
+		a0976f4b b9107945 d7118e8a b3100663
+		1ca920b7 18f12fdf 42c5a72e 6bbf3775
+		4d9ef209 f7ddd5bb 4c03bed0 0aa98752
+		47c69d5d 9cf61340 96d6868f 4d9b4035
+[INFO]  snarkJS: Circuit Hash: 
+		a0976f4b b9107945 d7118e8a b3100663
+		1ca920b7 18f12fdf 42c5a72e 6bbf3775
+		4d9ef209 f7ddd5bb 4c03bed0 0aa98752
+		47c69d5d 9cf61340 96d6868f 4d9b4035
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #2 Nymira Labs coordinator 2:
+		b1811c92 cfcd161e 3a033942 103d042a
+		0b8c8a90 c8e6b9ed a82c7eb3 dc845f3d
+		c2f3c4fd 6132ce80 507b96c9 bd52f55e
+		7a65e2ea b0617b9b 6cf232ca 7d38e7d2
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: contribution #1 Nymira Labs coordinator 1:
+		6c917427 1ee476b2 b1f55f35 bf127b88
+		d61ec889 264bc5b2 cecc9caf 725d92da
+		0d69087b 2fe62b59 d184fe6b 88c9865e
+		5731bddc 46d541c8 df998372 41729fbc
+[INFO]  snarkJS: -------------------------
+[INFO]  snarkJS: ZKey Ok!

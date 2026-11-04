@@ -1,0 +1,10 @@
+   Compiling zkapi-proof v0.2.0 (<nymira>/vendor/zkapi/protocol/rust/crates/zkapi-proof)
+    Finished `release` profile [optimized] target(s) in 2.98s
+     Running tests/zkey_import.rs (/tmp/zk-import-target/release/deps/zkey_import-5eb72b86b276b615)
+
+running 2 tests
+test public_powers_of_tau_passes_the_import_checks ... ok
+test ceremony_zkeys_pass_the_import_gates ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 21.55s
+

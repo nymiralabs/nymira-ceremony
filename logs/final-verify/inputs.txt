@@ -1,0 +1,12 @@
+node v26.13.0
+Wed Nov  4 04:04:22 UTC 2026
+1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922  powersOfTau28_hez_final_16.ptau
+4ac25c811318d96a873b8b232c7be2252e16c0bd
+request.r1cs: 23507 constraints, 12 public inputs, 23215 witnesses, domain 2^15, sha256 28067d5f6f8b222a5af37cf53239f04a972f6fc0d0c031ed0ad99bc1d4820cfd
+withdrawal.r1cs: 20545 constraints, 16 public inputs, 20062 witnesses, domain 2^15, sha256 cd332f7b3876a9a7f883bf8d3f7baa8c090ce8a301c7495ee4ccedfc4f485401
+28067d5f6f8b222a5af37cf53239f04a972f6fc0d0c031ed0ad99bc1d4820cfd  r1cs/request.r1cs
+cd332f7b3876a9a7f883bf8d3f7baa8c090ce8a301c7495ee4ccedfc4f485401  r1cs/withdrawal.r1cs
+56b0f2d61ab18d87c4697e4dcb5409ea9b2e34f0e1185de58905fed8ed3b505e  final/request.zkey
+92b83710e19adad380e4baba3a4726e94fa96587ca12c3be4f6205eb7da5a16b  final/withdrawal.zkey
+		4d9ef209 f7ddd5bb 4c03bed0 0aa98752
+		47c69d5d 9cf61340 96d6868f 4d9b4035
